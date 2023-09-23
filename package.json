@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-chrome": "npx playwright test e2eflow.spec.ts --project=chromium --headed",
-    "test-firefox": "npx playwright test e2eflow.spec.ts --project=firefox --headed",
-    "test-webkit": "npx playwright test e2eflow.spec.ts --project=webkit --headed"
+    "test-chrome": "npx cucumber-js -p test_runner --tags @login"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +14,8 @@
     "@faker-js/faker": "^8.0.2",
     "@playwright/test": "^1.37.1",
     "dotenv": "^16.3.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
