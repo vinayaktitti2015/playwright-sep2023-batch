@@ -1,10 +1,12 @@
 {
   "profilepicpath": "testdata/profilepic.jpeg",
-  "name": "Murali Kumar",
-  "email": "envkt@example.com",
+  "firstname": "Murali",
+  "lastname": "Kumar",
+  "email": "murali003@example.com",
+  "password": "Admin@123",
   "website": "http://www.example.com",
   "experience": "10+",
   "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
-  "message": "Message Sent (go back)"
+  "successmessage": "Your registration completed",
+  "myaccount": "My account"
 }
-
