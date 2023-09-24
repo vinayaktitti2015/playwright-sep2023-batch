@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "allure-test": "ALLURE_RESULTS_DIR=my-allure-results npx playwright test tabshandling.spec.ts --reporter=allure-playwright",
+    "allure-generate": "allure generate my-allure-results -o html-allure-report --clean",
+    "allure-open": "allure open html-allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "@playwright/test": "^1.37.1",
+    "allure-playwright": "^2.8.1",
     "fs": "^0.0.1-security"
   }
 }

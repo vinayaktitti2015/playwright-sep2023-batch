@@ -3,26 +3,9 @@ import { test, expect } from "@playwright/test";
 // test suite
 test.describe("web ui controls", () => {
   // hooks or annotations
-
-  test.beforeAll(async ({ page }) => {
-    // api call
-    // db connection
-  });
-  test.beforeEach(async ({ page }) => {
-    await page.goto("/samplepagetest/");
-    // user login
-  });
-
-  test.afterAll(async ({ page }) => {
-    // db connection close
-  });
-  test.afterEach(async ({ page }) => {
-    // user logout
-    //await page.close();
-  });
-
   // test cases
-  test("should render", async ({ page }) => {
+  test("should fill the form successfully", async ({ page }) => {
+    await page.goto("https://www.globalsqa.com/samplepagetest/");
     const profilePic = page.locator('[name="file-553"]');
     const name = page.locator("#g2599-name");
     const email = page.locator("#g2599-email");
@@ -51,7 +34,7 @@ test.describe("web ui controls", () => {
 
     await comment.fill("This is a comment");
     await submit.click().then(async () => {
-      await expect(page.waitForLoadState("domcontentloaded")).toBeTruthy()
+      expect(page.waitForLoadState("domcontentloaded")).toBeTruthy();
       await page.waitForSelector("div[class='content_bgr'] h3:nth-child(1)");
       const message = await page.getByText("Message Sent (go back)");
       await expect(message).toBeVisible();
@@ -59,7 +42,3 @@ test.describe("web ui controls", () => {
   });
 });
 
-
-// test suite
-// annonations
-// test cases
