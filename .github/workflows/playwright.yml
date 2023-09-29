@@ -19,6 +19,8 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test --project=chromium
+      - name: generate reports
+        run: npx playwright show-reports
       - uses: actions/upload-artifact@v3
         if: always()
         with:
